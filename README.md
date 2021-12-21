@@ -1,4 +1,3 @@
-# CS105-Computer-Graphic
 # Yêu cầu: Cài đặt yarn và Node.js
 
 # 1. Cài đặt Node.js: https://nodejs.org/en/download/
