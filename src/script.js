@@ -229,20 +229,20 @@ function init() {
      ob.add(params, "shape", {
           Box: "box",
           Sphere: "sphere",
-          TeaPot: "teapot",
-          Torus: "torus",
-          TorusKnox: "torusKnox",
-          Cylinder: "cylinder",
           Cone: "cone",
+          Cylinder: "cylinder",
+          Torus: "torus",
+          TeaPot: "teapot",
+          TorusKnox: "torusKnox",
           Octahedron: "octahedron",
           Tube: "tube",
      }).name("Shape");
 
      ob.add(params, "material", {
-          Wireframe: "wireframe",
           Point: "point",
+          Lines: "wireframe",
+          Solid: "smooth",
           Flat: "flat",
-          Smooth: "smooth",
           Glossy: "glossy",
           Textured: "textured",
           Reflective: "reflective",
@@ -512,20 +512,20 @@ function simulate() {
           case "sphere":
                mesh.geometry = sphereGeo;
                break;
-          case "teapot":
-               mesh.geometry = teapotGeo;
-               break;
-          case "torus":
-               mesh.geometry = torusGeo;
-               break;
-          case "torusKnox":
-               mesh.geometry = torusKoxGeo;
+          case "cone":
+               mesh.geometry = coneGeo;
                break;
           case "cylinder":
                mesh.geometry = cylinderGeo;
                break;
-          case "cone":
-               mesh.geometry = coneGeo;
+          case "torus":
+               mesh.geometry = torusGeo;
+               break;
+          case "teapot":
+               mesh.geometry = teapotGeo;
+               break;
+          case "torusKnox":
+               mesh.geometry = torusKoxGeo;
                break;
           case "tube":
                mesh.geometry = tubeGeo;
@@ -541,17 +541,17 @@ function simulate() {
           points.visible = false;
      }
      switch (params.material) {
-          case "wireframe":
-               mesh.material = wireMaterial;
-               break;
           case "point":
                mesh.material = flatMaterial;
                break;
-          case "flat":
-               mesh.material = flatMaterial;
+          case "wireframe":
+               mesh.material = wireMaterial;
                break;
           case "smooth":
                mesh.material = gouraudMaterial;
+               break;
+          case "flat":
+               mesh.material = flatMaterial;
                break;
           case "glossy":
                mesh.material = phongMaterial;
