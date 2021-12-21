@@ -22,5 +22,5 @@ yarn build
 
 # 8. Link video demo trên localhost:
 
-# 9. Link application: soncms.us
+# 9. Link application: https://soncms.us/
 
