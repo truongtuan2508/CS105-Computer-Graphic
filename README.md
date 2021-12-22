@@ -20,7 +20,7 @@ yarn dev
 # 7. Build production
 yarn build
 
-# 8. Link video demo trên localhost:
+# 8. Link video demo trên localhost: https://www.youtube.com/watch?v=n4HLMEey_Bs
 
 # 9. Link application: https://soncms.us/
 
